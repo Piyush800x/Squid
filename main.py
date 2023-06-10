@@ -1,6 +1,8 @@
 import os 
 from time import sleep
 
+
+# PROXY SETUP 
 os.system("sudo apt update -y")
 os.system("sudo apt install squid apache2-utils -y")
 os.system("wget https://raw.githubusercontent.com/Piyush800x/Squid/master/squid.conf")
@@ -22,3 +24,7 @@ sleep(1)
 os.system("sudo rm -r /etc/squid/squid.conf")
 os.system("sudo mv squid.conf /etc/squid/") 
 os.system("sudo service squid restart")
+
+# OPENVPN SETUP
+os.system("sudo apt install openvpn -y")
+os.system("")
