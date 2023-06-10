@@ -1,4 +1,4 @@
-# Fast Squid Proxy Installer with Basic Authentication  
+# Fast Squid Proxy Installer with Basic Authentication UBUNTU
 ## Clone this repo
 ```
 git clone https://github.com/Piyush800x/Squid.git
