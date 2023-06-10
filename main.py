@@ -27,4 +27,6 @@ os.system("sudo service squid restart")
 
 # OPENVPN SETUP
 os.system("sudo apt install openvpn -y")
-os.system("")
+os.system("wget https://raw.githubusercontent.com/Piyush800x/Squid/master/in-aes-256-cbc-tcp-ip.ovpn")
+sleep(2)
+os.system("sudo openvpn --config in-aes-256-cbc-tcp-ip.ovpn")
