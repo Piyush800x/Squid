@@ -1,7 +1,7 @@
 import os 
 
 os.system("sudo apt update -y")
-os.system("sudo apt isnatll squid apache2-utils -y")
+os.system("sudo apt install squid apache2-utils -y")
 os.system("wget https://raw.githubusercontent.com/Piyush800x/Squid/master/squid.conf")
 os.system("rm -r /etc/squid/squid.conf")
 os.system("mv squid.conf /etc/squid/") 
