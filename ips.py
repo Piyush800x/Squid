@@ -1,5 +1,7 @@
 import os
 
+os.system('echo "250   vpnbypass" >> /etc/iproute2/rt_tables')
+
 os.system("ip route add 168.63.129.16 via 10.0.0.1 || true")
 os.system("ip route add 169.254.169.254 via 10.0.0.1 || true")
 
