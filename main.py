@@ -2,9 +2,9 @@ import os
 from time import sleep
 import platform
 import subprocess
+import distro
 
-
-distro = platform.linux_distribution(full_distribution_name=False)[0].lower()
+distro = distro.id()
 if "debian" in distro or "ubuntu" in distro:
     PACKAGE_MANAGER = "apt-get"
 elif "fedora" in distro or "red hat" in distro:
@@ -40,7 +40,7 @@ def squid_setup(username: str):
     print(
         f"------------------------------SET PROXY PASSWORD, username: {username} -----------------------------")
     sleep(1)
-    os.system(f"htpasswd -c /etc/squid/passwd {username}")
+    os.system(f"sudo htpasswd -c /etc/squid/passwd {username}")
     del username
     sleep(1)
     # os.system("sudo rm -r /etc/squid/squid.conf")
