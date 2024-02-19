@@ -19,7 +19,7 @@ def squid_setup(username: str):
     os.system(f"sudo {PACKAGE_MANAGER} update -y")
     # os.system("sudo yum update -y")
     if PACKAGE_MANAGER == "apt-get":
-        os.system(f"sudo {PACKAGE_MANAGER} install squid apache2-utils -y")
+        os.system(f"sudo {PACKAGE_MANAGER} install squid apache2-utils net-tools -y")
         os.system(
             "wget https://raw.githubusercontent.com/Piyush800x/Squid/master/squid_ubuntu.conf")
         os.system("sudo rm -r /etc/squid/squid.conf")
